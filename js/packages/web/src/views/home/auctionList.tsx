@@ -38,9 +38,9 @@ export const AuctionListView = () => {
   return (
     <>
       <Banner
-        src="/main-banner.svg"
-        headingText="The amazing world of Metaplex."
-        subHeadingText="Buy exclusive Metaplex NFTs."
+        src="/earth.jpg"
+        headingText="Powering a Sustainable Future"
+        subHeadingText="The Blockcities™ platform is powering a sustainable future using blockchain technology. Supported asset classes include real estate, managed agriculture and renewable energy."
         actionComponent={<HowToBuyModal buttonClassName="secondary-btn" />}
         useBannerBg
       />

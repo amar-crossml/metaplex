@@ -19,7 +19,7 @@ const getDefaultLinkActions = (connected: boolean) => {
       <Button className="app-btn">Explore</Button>
     </Link>,
     <Link to={`/artworks`} key={'artwork'}>
-      <Button className="app-btn">{connected ? 'My Items' : 'Artwork'}</Button>
+      <Button className="app-btn">{connected ? 'My Items' : 'NFTs'}</Button>
     </Link>,
     <Link to={`/artists`} key={'artists'}>
       <Button className="app-btn">Creators</Button>
@@ -109,7 +109,7 @@ const MetaplexMenu = () => {
 export const LogoLink = () => {
   return (
     <Link to={`/`}>
-      <img src={'/metaplex-logo.svg'} />
+      <img src={'/blockcities-white-logo.png'} />
     </Link>
   );
 };
