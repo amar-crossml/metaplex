@@ -13,7 +13,7 @@ export const SolCircle = (props: { iconSize?: number }) => {
         display: 'inline-flex',
       }}
     >
-      <img src="/sol-circle.svg" />
+      <img src="/metaplex/sol-circle.svg" />
     </span>
   );
 };
