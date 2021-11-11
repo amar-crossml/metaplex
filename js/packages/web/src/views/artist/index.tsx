@@ -16,8 +16,8 @@ export const ArtistView = () => {
     700: 2,
     500: 1,
   };
-
   const artworkGrid = (
+    
     <Masonry
       breakpointCols={breakpointColumnsObj}
       className="my-masonry-grid"
@@ -32,7 +32,7 @@ export const ArtistView = () => {
               </Link>
             );
           })
-        : [...Array(6)].map((_, idx) => <CardLoader key={idx} />)}
+        : 'No NFTs uploaded yet'}
     </Masonry>
   );
 
