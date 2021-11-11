@@ -141,7 +141,7 @@ const AddFundsModal = (props: {
                 lineHeight: 1,
               }}
             >
-              <img src="/metaplex/sol.svg" width="10" />
+              <img src="/sol.svg" width="10" />
             </span>{' '}
             SOL
           </span>
@@ -191,7 +191,7 @@ const AddFundsModal = (props: {
             }}
           >
             <span style={{ marginRight: 5 }}>Sign with</span>
-            <img src="/metaplex/ftxpay.png" width="80" />
+            <img src="/ftxpay.png" width="80" />
           </div>
         </Button>
       </div>
@@ -390,7 +390,7 @@ export const Cog = () => {
         }
       >
         <Button className="wallet-key">
-          <img src="/metaplex/cog.svg" />
+          <img src="/cog.svg" />
         </Button>
       </Popover>
     </div>
@@ -452,7 +452,7 @@ export const CurrentUserBadgeMobile = (props: {
         <span className="balance-title">Balance</span>
         <span>
           <span className="sol-img-wrapper">
-            <img src="/metaplex/sol.svg" width="10" />
+            <img src="/sol.svg" width="10" />
           </span>{' '}
           {formatNumber.format(balance)}&nbsp;&nbsp; SOL{' '}
           <span

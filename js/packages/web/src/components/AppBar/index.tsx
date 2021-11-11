@@ -109,7 +109,7 @@ const MetaplexMenu = () => {
 export const LogoLink = () => {
   return (
     <Link to={`/`}>
-      <img src={'/metaplex/blockcities-white-logo.png'} />
+      <img src={'/blockcities-white-logo.png'} />
     </Link>
   );
 };

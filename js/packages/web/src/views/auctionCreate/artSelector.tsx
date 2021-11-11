@@ -73,7 +73,7 @@ export const ArtSelector = (props: ArtSelectorProps) => {
         })}
         {(allowMultiple || selectedItems.size === 0) && (
           <div
-            className="ant-card ant-card-bordered ant-card-hoverable art-card"
+            className="ant-card art-card"
             style={{ width: 200, height: 300, display: 'flex' }}
             onClick={open}
           >

@@ -13,7 +13,7 @@ export const Banner = (props: {
     const mainBg = document.getElementById('main-bg');
     const gradient = document.getElementById('bg-gradient');
     if (mainBg && props.useBannerBg) {
-      mainBg.style.backgroundImage = `url(${props.src})`;
+      // mainBg.style.backgroundImage = `url(${props.src})`;
       mainBg.style.display = 'inline-block';
       if (gradient) {
         gradient.style.display = 'inline-block';

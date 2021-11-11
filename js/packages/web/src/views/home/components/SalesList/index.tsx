@@ -37,7 +37,7 @@ export const SalesListView = () => {
   return (
     <>
       <Banner
-        src="/earth.jpg"
+        src="https://blockcities.com/wp-content/uploads/2021/05/crypto_illustration_19.png"
         headingText="Powering a Sustainable Future"
         subHeadingText="The Blockcities™ platform is powering a sustainable future using blockchain technology. Supported asset classes include real estate, managed agriculture and renewable energy."
         actionComponent={<HowToBuyModal buttonClassName="secondary-btn" />}
