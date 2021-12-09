@@ -20,6 +20,8 @@ import {
   CONFIG_LINE_SIZE,
   EXTENSION_JSON,
   EXTENSION_PNG,
+  EXTENSION_JPG,
+  EXTENSION_GIF,
   CANDY_MACHINE_PROGRAM_ID,
 } from './helpers/constants';
 import {
@@ -121,29 +123,33 @@ programCommand('upload')
       secretKey: ipfsInfuraSecret,
     };
 
-    const pngFileCount = files.filter(it => {
-      return it.endsWith(EXTENSION_PNG);
+    const imageFileCount = files.filter(it => {
+      return (
+        it.endsWith(EXTENSION_PNG) ||
+        it.endsWith(EXTENSION_GIF) ||
+        it.endsWith(EXTENSION_JPG)
+      );
     }).length;
     const jsonFileCount = files.filter(it => {
       return it.endsWith(EXTENSION_JSON);
     }).length;
 
     const parsedNumber = parseInt(number);
-    const elemCount = parsedNumber ? parsedNumber : pngFileCount;
+    const elemCount = parsedNumber ? parsedNumber : imageFileCount;
 
-    if (pngFileCount !== jsonFileCount) {
+    if (imageFileCount !== jsonFileCount) {
       throw new Error(
-        `number of png files (${pngFileCount}) is different than the number of json files (${jsonFileCount})`,
+        `number of image files (${imageFileCount}) is different than the number of json files (${jsonFileCount})`,
       );
     }
 
-    if (elemCount < pngFileCount) {
+    if (elemCount < imageFileCount) {
       throw new Error(
-        `max number (${elemCount})cannot be smaller than the number of elements in the source folder (${pngFileCount})`,
+        `max number (${elemCount})cannot be smaller than the number of elements in the source folder (${imageFileCount})`,
       );
     }
 
-    log.info(`Beginning the upload for ${elemCount} (png+json) pairs`);
+    log.info(`Beginning the upload for ${elemCount} (image+json) pairs`);
 
     const startMs = Date.now();
     log.info('started at: ' + startMs.toString());
@@ -201,9 +207,19 @@ programCommand('withdraw')
     }
     const walletKeyPair = loadWalletKey(keypair);
     const anchorProgram = await loadCandyProgram(walletKeyPair, env, rpcUrl);
+
+    // this is hash of first 8 symbols in pubkey
+    // account:Config
+    const hashConfig = [155, 12, 170, 224, 30, 250, 204, 130];
     const configOrCommitment = {
       commitment: 'confirmed',
       filters: [
+        {
+          memcmp: {
+            offset: 0,
+            bytes: hashConfig,
+          },
+        },
         {
           memcmp: {
             offset: 8,
