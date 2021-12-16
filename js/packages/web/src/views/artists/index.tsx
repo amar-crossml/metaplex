@@ -46,6 +46,15 @@ export const ArtistsView = () => {
 
   return (
     <Layout style={{ margin: 0, marginTop: 30 }}>
+      <a href="https://form.jotform.com/213491270974157" target="_blank" style={{
+    color: '#ffffff',
+    border: '1px solid #ffffff',
+    width: '180px',
+    borderRadius: '5px',
+    padding: '10px',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+}}>Creator Application</a>
       <Content style={{ display: 'flex', flexWrap: 'wrap' }}>
         <Col style={{ width: '100%', marginTop: 10 }}>{artistGrid}</Col>
       </Content>

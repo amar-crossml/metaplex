@@ -22,9 +22,13 @@ const getDefaultLinkActions = (connected: boolean) => {
       <Button className="app-btn">{connected ? 'My Items' : 'NFTs'}</Button>
     </Link>,
     <Link to={`/artists`} key={'artists'}>
-      <Button className="app-btn">Creators</Button>
-    </Link>,
-  ];
+    <Button className="app-btn">Creators</Button>
+  </Link>,
+    <Link to={`/how-it-works`} key={'how-it-works'}>
+    <Button className="app-btn">How it Works</Button>
+  </Link>,
+  
+];
 };
 
 const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
