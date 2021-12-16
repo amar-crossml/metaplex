@@ -5,6 +5,7 @@ import {
   ArtCreateView,
   ArtistsView,
   ArtistView,
+  HowitWorksView,
   ArtView,
   ArtworksView,
   AuctionCreateView,
@@ -40,6 +41,7 @@ export function Routes() {
             <Route exact path="/art/:id" component={() => <ArtView />} />
             <Route exact path="/artists/:id" component={() => <ArtistView />} />
             <Route exact path="/artists" component={() => <ArtistsView />} />
+            <Route exact path="/how-it-works" component={() => <HowitWorksView />} />
             <Route
               exact
               path="/auction/create/:step_param?"
