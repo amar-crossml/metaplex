@@ -351,9 +351,9 @@ export const pullPack = async ({
     );
   }
 
-  const metadataKeys = Object.values(state.packCardsByPackSet[packSetKey]).map(
-    ({ info }) => info.metadata,
-  );
+  const metadataKeys = Object.values(
+    state.packCardsByPackSet[packSetKey] || {},
+  ).map(({ info }) => info.metadata);
   const newState = await pullMetadataByKeys(connection, state, metadataKeys);
 
   await pullEditions(
@@ -363,7 +363,7 @@ export const pullPack = async ({
     metadataKeys.map(m => newState.metadataByMetadata[m]),
   );
 
-  return state;
+  return newState;
 };
 
 export const pullAuctionSubaccounts = async (
