@@ -38,7 +38,7 @@ export const AuctionListView = () => {
   return (
     <>
       <Banner
-        src="https://blockcities.com/wp-content/uploads/2021/05/crypto_illustration_19.png"
+        src="/front-page-banner.png"
         headingText="Powering a Sustainable Future"
         subHeadingText=""
         actionComponent={<HowToBuyModal buttonClassName="secondary-btn" />}

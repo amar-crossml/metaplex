@@ -36,13 +36,12 @@ export const Banner = (props: {
       <div id="mobile-banner">
         <img className="banner-img" src={props.src} />
         <div className="banner-content">
-          <div id={'main-heading'}>{props.headingText}</div>
+          <div id={'main-heading'}>Unlocking a World of Powers</div>
           {/* <div id={'sub-heading'}>{props.subHeadingText}</div> */}
           <div id={'sub-heading'}>
-            A virtual twin earth has been created that holds the keys to unlocking powers in the real world. Soon you’ll need to learn how to harness your new powers, which will be unlocked in Q1 2022 in cities where tiles have been purchased.<br />
-            Once available, your city will be granted the ability to Propose, Vote, Pre-Reserve, and Invest in real world assets. Be the hero of your city, while locking in your ability to share in transaction fees (.5%) that occur in the cities you own.<br />
-            Round up your community and pass out the “Keys to the City” to individuals that you want participating in the journey with you.<br />
-            Get ready, your next assignment will be to design the future. The brightest image of what can be experienced… good luck.
+          A virtual twin earth has been created that holds the keys to unlocking powers in the real world. Soon you’ll need to learn how to harness your new powers, which will be unlocked in Q1 2022 in cities where tiles have been purchased.<br /><br />
+          Once available, your city will be granted the ability to Propose, Vote, Pre-Reserve, and Invest in real world assets. Be the hero of your city, while locking in your ability to share in transaction fees that occur in the cities you own.<br /><br />
+          Get ready, your next assignment will be to round up your community and begin designing the future, with the brightest image of what can be experienced… good luck.<br />
           </div>
           {props.actionComponent}
         </div>
@@ -51,16 +50,15 @@ export const Banner = (props: {
         id={'current-banner'}
         style={{ backgroundImage: `url(${props.src})` }}
       >
-        <span id={'gradient-banner'}></span>
+        {/* <span id={'gradient-banner'}></span> */}
         <div id="banner-inner">
           <div id={'message-container'}>
-            <div id={'main-heading'}>{props.headingText}</div>
+            <div id={'main-heading'}>Unlocking a World of Powers</div>
             {/* <div id={'sub-heading'}>{props.subHeadingText}</div> */}
             <div id={'sub-heading'}>
-            A virtual twin earth has been created that holds the keys to unlocking powers in the real world. Soon you’ll need to learn how to harness your new powers, which will be unlocked in Q1 2022 in cities where tiles have been purchased.<br />
-            Once available, your city will be granted the ability to Propose, Vote, Pre-Reserve, and Invest in real world assets. Be the hero of your city, while locking in your ability to share in transaction fees (.5%) that occur in the cities you own.<br />
-            Round up your community and pass out the “Keys to the City” to individuals that you want participating in the journey with you.<br />
-            Get ready, your next assignment will be to design the future. The brightest image of what can be experienced… good luck.
+            A virtual twin earth has been created that holds the keys to unlocking powers in the real world. Soon you’ll need to learn how to harness your new powers, which will be unlocked in Q1 2022 in cities where tiles have been purchased.<br /><br />
+            Once available, your city will be granted the ability to Propose, Vote, Pre-Reserve, and Invest in real world assets. Be the hero of your city, while locking in your ability to share in transaction fees that occur in the cities you own.<br /><br />
+            Get ready, your next assignment will be to round up your community and begin designing the future, with the brightest image of what can be experienced… good luck.<br />
             </div>
               {props.actionComponent}
           </div>
