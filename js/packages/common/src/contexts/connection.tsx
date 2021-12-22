@@ -37,7 +37,9 @@ export type ENV =
   | 'testnet'
   | 'devnet'
   | 'localnet'
-  | 'lending';
+  | 'lending'
+  | 'custom';
+
 
 export const ENDPOINTS = [
   {
@@ -64,6 +66,11 @@ export const ENDPOINTS = [
     name: 'devnet' as ENV,
     endpoint: clusterApiUrl('devnet'),
     ChainId: ChainId.Devnet,
+  },
+  {
+    name: 'custom' as ENV,
+    endpoint: "https://dark-holy-butterfly.solana-mainnet.quiknode.pro/",
+    chainId: ChainId.MainnetBeta,
   },
 ];
 
