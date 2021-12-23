@@ -68,13 +68,18 @@ export const ENDPOINTS = [
     ChainId: ChainId.Devnet,
   },
   {
-    name: 'custom' as ENV,
-    endpoint: "https://dark-holy-butterfly.solana-mainnet.quiknode.pro/",
+    name: 'quicknode-mainnet' as ENV,
+    endpoint: "https://dark-holy-butterfly.solana-mainnet.quiknode.pro/5159c226e5557e3bff7607caa9a872f5281eb0d4/",
+    chainId: ChainId.MainnetBeta,
+  },
+  {
+    name: 'runnode-mainet' as ENV,
+    endpoint: "https://connect.runnode.com/?apikey=k7v7PdbOL69r4Oju7qGQ",
     chainId: ChainId.MainnetBeta,
   },
 ];
 
-const DEFAULT = ENDPOINTS[0].endpoint;
+const DEFAULT = ENDPOINTS[6].endpoint;
 
 interface ConnectionConfig {
   connection: Connection;
