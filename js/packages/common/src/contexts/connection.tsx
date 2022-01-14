@@ -68,8 +68,13 @@ export const ENDPOINTS = [
     ChainId: ChainId.Devnet,
   },
   {
-    name: 'quicknode-mainnet' as ENV,
+    name: 'quicknode-mainnet-secondary' as ENV,
     endpoint: "https://dark-holy-butterfly.solana-mainnet.quiknode.pro/5159c226e5557e3bff7607caa9a872f5281eb0d4/",
+    chainId: ChainId.MainnetBeta,
+  },
+  {
+    name: 'quicknode-mainnet-primary' as ENV,
+    endpoint: "https://lingering-old-moon.solana-mainnet.quiknode.pro/145905b510e072451b64aaec186d804235b5f47c/",
     chainId: ChainId.MainnetBeta,
   },
   {
@@ -79,7 +84,7 @@ export const ENDPOINTS = [
   },
 ];
 
-const DEFAULT = ENDPOINTS[6].endpoint;
+const DEFAULT = ENDPOINTS[7].endpoint;
 
 interface ConnectionConfig {
   connection: Connection;
