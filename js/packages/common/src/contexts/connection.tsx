@@ -83,7 +83,7 @@ export const ENDPOINTS: Array<Endpoint> = [
   {
     name: 'runnode-mainet',
     label: 'runnode-mainet',
-    url: "https://connect.runnode.com/?apikey=k7v7PdbOL69r4Oju7qGQ",
+    url: "https://connect.runnode.com/?apikey=wrhWKhf7MMm8yKo2sNIO",
     chainId: ChainId.MainnetBeta,
   },
 ];
